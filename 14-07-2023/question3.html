@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question3</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-dark: #99a98f;
+        --bg-dark1: #c1d0b5;
+        --primary-color: #fff8de;
+        --secondary-color: #d6e8db;
+        --p-nav: 0 1.5rem;
+        --p-container: 1rem 1.5rem;
+      }
+
+      html,
+      body {
+        font-family: sans-serif;
+      }
+      header > h1 {
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      nav {
+        background-color: var(--bg-dark1);
+        padding: var(--p-nav);
+      }
+      nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+      }
+
+      nav > ul > li {
+        padding: 1rem 0.5rem;
+      }
+
+      nav > ul > li:hover {
+        background-color: var(--bg-dark);
+      }
+
+      nav > ul > li > a {
+        color: var(--primary-color);
+        text-decoration: none;
+        padding: 1rem 0.5rem;
+      }
+
+      .hero-image {
+        padding: 1rem;
+        background-color: var(--bg-dark);
+      }
+
+      .hero-image img:hover {
+        transform: translateX(25px) translateY(20px);
+        transition: all ease 1s;
+      }
+
+      #hero {
+        padding: var(--p-container);
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+      }
+
+      .hero-content {
+        padding: 1.5rem 2.5rem;
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: start;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        background-color: var(--bg-dark);
+        color: var(--primary-color);
+        font-size: 1rem;
+        border: none;
+      }
+
+      button:hover {
+        background-color: var(--bg-dark1);
+        cursor: pointer;
+        color: var(--secondary-color);
+        box-shadow: 5px 5px 0px 0px black;
+        transition: all ease 0.5s;
+      }
+
+      #features {
+        padding: var(--p-container);
+        background-color: var(--secondary-color);
+      }
+
+      #features > h3 {
+        font-size: 2rem;
+      }
+      .feature-container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 4rem;
+        margin: 1.5rem 0;
+      }
+
+      .feature {
+        padding: 1.5rem 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 30%;
+        background-color: var(--primary-color);
+        border-radius: 20px;
+      }
+
+      .feature > img {
+        border-radius: 20px;
+      }
+      .feature > h4 {
+        font-size: 2rem;
+      }
+      .feature > p {
+        opacity: 0.7;
+        font-size: 0.8rem;
+      }
+      .features > h3 {
+        flex: 100%;
+      }
+
+      #pricing {
+        background-color: var(--primary-color);
+        padding: var(--p-container);
+      }
+
+      #pricing > h3 {
+        font-size: 2rem;
+      }
+      .plan {
+        width: 30%;
+        background-color: var(--secondary-color);
+        padding: 2rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+        flex-direction: column;
+      }
+      .plan > h4 {
+        font-size: 1.5rem;
+      }
+      #gallery {
+        padding: 0.5rem 1.5rem;
+      }
+      #gallery > h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+      .photo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: var(--bg-dark);
+        border-radius: 20px;
+        color: white;
+      }
+      .photo > img {
+        border-radius: 20px;
+      }
+      #contact {
+        background-color: #282828;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+      }
+      #contact > h3 {
+        font-size: 2rem;
+      }
+
+      #contact > form > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.5rem 0;
+      }
+      #contact > form > button {
+        border-radius: 20px;
+      }
+
+      footer {
+        background-color: #1d1d1d;
+        text-align: center;
+        color: white;
+        padding: 1.5rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="hero">
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+          alt="Hero Image"
+          width="250"
+          height="250"
+        />
+      </div>
+
+      <div class="hero-content">
+        <h2>Discover the World of Web Development</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus tortor,
+          eu dapibus sapien sodales non. Curabitur hendrerit auctor elit, a
+          mattis mauris posuere a.
+        </p>
+        <button>Learn More</button>
+      </div>
+    </section>
+
+    <section id="features">
+      <h3>Key Features</h3>
+      <div class="feature-container">
+        <div class="feature">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="feature 1"
+            width="250"
+            height="250"
+          />
+          <h4>Feature 1</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non.
+          </p>
+        </div>
+
+        <div class="feature">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="feature 2"
+            width="250"
+            height="250"
+          />
+          <h4>Feature 2</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non.
+          </p>
+        </div>
+      </div>
+
+      <!-- Repeat the above feature structure for additional features -->
+    </section>
+
+    <section id="pricing">
+      <h3>Pricing Plans</h3>
+      <div class="feature-container">
+        <div class="plan">
+          <h4>Basic Plan</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non.
+          </p>
+          <button>Sign Up</button>
+        </div>
+
+        <div class="plan">
+          <h4>Pro Plan</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non.
+          </p>
+          <button>Sign Up</button>
+        </div>
+      </div>
+      <!-- Repeat the above plan structure for additional plans -->
+    </section>
+
+    <section id="gallery">
+      <h3>Photo Gallery</h3>
+      <div class="feature-container">
+        <div class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="Hero Image"
+            width="250"
+            height="250"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="Hero Image"
+            width="250"
+            height="250"
+          />
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Repeat the above photo structure for additional photos -->
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 My Different HTML Program. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

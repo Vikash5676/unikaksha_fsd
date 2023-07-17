@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-family: sans-serif;
+      }
+      header > h1 {
+        text-align: center;
+      }
+      nav {
+        background-color: lightgrey;
+      }
+      nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+        list-style: none;
+
+        width: 40%;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+        padding: 1rem 1.5rem;
+      }
+      li:hover a {
+        cursor: pointer;
+        background-color: rgb(0, 121, 173);
+        color: white;
+      }
+
+      #banner {
+        width: 100%;
+        min-height: 30vh;
+        background-image: linear-gradient(
+          to right,
+          crimson,
+          orange,
+          yellow,
+          white
+        );
+        padding: 1rem 1.5rem;
+      }
+      #banner > h2 {
+        font-size: 2rem;
+      }
+      #banner p,
+      button {
+        margin-top: 1.5rem;
+      }
+      button {
+        background-color: crimson;
+        color: white;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        transition: all ease 0.5s;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: rgb(101, 10, 28);
+        box-shadow: 5px 5px 0 0 #000000;
+      }
+
+      #services {
+        padding: 0.5rem 1.5rem;
+        background-color: #f1f1f1;
+      }
+      #services > h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+      .service {
+        padding: 1rem 0;
+        line-height: 1.2;
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+        flex-direction: column;
+      }
+      .service > h4 {
+        font-size: 1.5rem;
+        opacity: 0.7;
+      }
+      .service > p {
+        font-size: 0.9rem;
+        opacity: 0.6;
+      }
+
+      #gallery {
+        padding: 0.5rem 1.5rem;
+      }
+      #gallery > h3 {
+        font-size: 2rem;
+        margin: 1rem 0;
+      }
+      .photo {
+        display: flex;
+        align-items: start;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      #contact {
+        background-color: #282828;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1.5rem 0;
+      }
+      #contact > h3 {
+        font-size: 2rem;
+      }
+
+      #contact > form > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.5rem 0;
+      }
+
+      footer {
+        background-color: #1d1d1d;
+        text-align: center;
+        color: white;
+        padding: 1.5rem 0;
+      }
+      .flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 2rem;
+      }
+      .photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+      .photo > img {
+        border-radius: 20px;
+      }
+      .service:nth-child(even) > .flex-container {
+        flex-direction: row-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="banner">
+      <h2>Discover the Power of HTML</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec
+        fringilla nisl, sed pellentesque urna. Sed faucibus tempus tortor, eu
+        dapibus sapien sodales non. Curabitur hendrerit auctor elit, a mattis
+        mauris posuere a.
+      </p>
+      <button>Learn More</button>
+    </section>
+
+    <section id="services">
+      <h3>Our Services</h3>
+      <div class="service">
+        <h4>Service 1</h4>
+        <div class="flex-container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non. Curabitur hendrerit auctor
+            elit, a mattis mauris posuere a.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="service 1"
+            width="250"
+            height="250"
+          />
+        </div>
+      </div>
+
+      <div class="service">
+        <h4>Service 2</h4>
+        <div class="flex-container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            nec fringilla nisl, sed pellentesque urna. Sed faucibus tempus
+            tortor, eu dapibus sapien sodales non. Curabitur hendrerit auctor
+            elit, a mattis mauris posuere a.
+          </p>
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="service 1"
+            width="250"
+            height="250"
+          />
+        </div>
+      </div>
+
+      <!-- Repeat the above service structure for additional services -->
+    </section>
+
+    <section id="gallery">
+      <h3>Photo Gallery</h3>
+      <div class="flex-container">
+        <div class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="photo 1"
+            width="250"
+            height="250"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="photo">
+          <img
+            src="https://images.unsplash.com/photo-1610465299993-e6675c9f9efa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+            alt="photo 2"
+            width="250"
+            height="250"
+          />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <!-- Repeat the above photo structure for additional photos -->
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 My Large HTML Program. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
