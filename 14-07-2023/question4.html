@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1e87f97fba.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Portfolio</title>
     <style>
       * {
@@ -22,24 +26,423 @@
       body {
         font-family: sans-serif;
         background-color: var(--color-dark);
+        color: white;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid var(--color-color-light-1);
+        background-color: var(--color-dark);
+        z-index: 99;
+      }
+
+      header h1 {
+        padding: 0.7rem 0;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      nav ul li {
+        padding: 0.7rem 1.5rem;
+        list-style: none;
+      }
+
+      nav ul li:hover {
+        background-color: var(--color-dark-1);
+        border-bottom: 2px solid var(--color-light);
+        transition: all ease 0.2s;
+      }
+
+      nav li a {
+        text-decoration: none;
+        color: var(--color-light);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      #section1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        min-height: 100vh;
+        align-items: center;
+        padding: 2rem;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .name {
+        letter-spacing: 3px;
+      }
+
+      .name .name1 {
+        opacity: 0.7;
+      }
+
+      .name i {
+        padding: 0 0.5rem;
+        font-size: 1.2rem;
+        color: rgb(232, 177, 155);
+      }
+
+      .my_name {
+        opacity: 1;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .title {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+      }
+
+      .desc {
+        width: 50%;
+        line-height: 1.5;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .buttons button {
+        padding: 0.5rem 1.5rem;
+        background-color: var(--color-dark-1);
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      .buttons button:hover {
+        background-color: var(--color-color-light-1);
+        box-shadow: 7px 5px 0 5px black;
+        transition: all ease 0.5s;
+        cursor: url(./pointer.svg), auto;
+      }
+
+      #section3 {
+        display: flex;
+        gap: 10vw;
+        padding: 2rem;
+        min-height: 100vh;
+        align-items: center;
+      }
+
+      .introduction {
+        max-width: 50%;
+        line-height: 1.5rem;
+        letter-spacing: 2.5px;
+        word-spacing: 5px;
+      }
+
+      .images {
+        width: 30%;
+        height: 400px;
+        /* background-color: #a5d7e8; */
+        position: relative;
+        overflow: hidden;
+      }
+
+      .images:hover img {
+        transform: scale(1.2);
+        transition: all ease 0.5s;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(227, 164, 5);
+        border-radius: 50%;
+        position: absolute;
+        top: -30px;
+        left: -30px;
+      }
+      .images img {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        bottom: 10%;
+        right: 10%;
+        /* display: none; */
+      }
+
+      .free_shape {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(227, 164, 5);
+        border-radius: 50%;
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+      }
+
+      #section2 {
+        min-height: 100vh;
+      }
+
+      .marquee i {
+        font-size: 6vw;
+        padding: 2rem 6vw;
+      }
+
+      #section2 h1 {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        text-align: center;
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
+
+      #section2 .experience {
+      }
+
+      .flex-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      .flex-box div p {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+      }
+
+      .cards {
+        display: flex;
+        flex: 100%;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .card {
+        padding: 2rem;
+        background-color: var(--color-color-light-1);
+        border-radius: 20px;
+        flex: 30%;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+      }
+
+      .icon {
+        font-size: 1.5rem;
+        color: var(--color-dark-1);
+      }
+      .icon i:hover {
+        cursor: pointer;
+        animation-name: spin;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .title1 {
+        font-size: 1.5rem;
+      }
+      .desc1 {
+        color: lightgray;
+        width: 70%;
+        line-height: 1.5;
+      }
+
+      footer {
+        background-color: #000;
+      }
+
+      .footer_top {
+        padding: 5vw 2rem 2rem 2rem;
+      }
+
+      .footer_top p {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .profiles {
+        display: flex;
+        gap: 2rem;
+        padding: 4rem 0;
+        font-size: 1.5rem;
+      }
+
+      .profiles div {
+        display: flex;
+        gap: 10px;
+      }
+
+      .profiles div > span {
+        padding: 0.7rem 0;
+        border-bottom: 3px solid black;
+      }
+      .profiles div i {
+        padding: 0.7rem 0;
+      }
+
+      .profiles div:hover span {
+        cursor: pointer;
+        border-bottom: 3px solid white;
+        transition: all ease 0.5s;
+      }
+
+      .footer_bottom {
+        border-top: 2px solid rgba(128, 128, 128, 0.363);
+        padding: 4rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .footer_name {
+        letter-spacing: 5px;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>My Portfolio</h1>
+      <h1>Vikash</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#section3">About</a></li>
+          <li><a href="#section1">Hire Me</a></li>
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact Us</a></li>
-      </ul>
-    </nav>
-    <section></section>
-    <section></section>
-    <section></section>
-    <section>
+    <section id="section1">
+      <div class="name">
+        <span class="name1">Hi, I`m</span> <span class="my_name">Vikash</span
+        ><i class="fa-solid fa-hand fa-shake"></i>
+      </div>
+      <div class="title">Full-Stack Development Specialist.</div>
+      <div class="desc">
+        I worked on several front-end and Full-Stack projects, from small
+        websites to large web applications. This hands-on experience has allowed
+        me to develop skills that help me create efficient and effective
+        solutions.
+      </div>
+      <div class="buttons"><button>Hire Me</button><button>My CV</button></div>
+    </section>
+    <section id="section2">
+      <h1>technologies</h1>
+      <marquee behavior="right" direction="" class="marquee">
+        <i class="fa-brands fa-html5 fa-bounce"></i>
+        <i class="fa-brands fa-css3-alt fa-beat-fade"></i>
+        <i class="fa-brands fa-js fa-fade"></i>
+        <i class="fa-brands fa-react fa-spin"></i>
+        <i class="fa-brands fa-node-js fa-spin fa-spin-reverse"></i>
+        <i class="fa-brands fa-bootstrap fa-flip"></i>
+      </marquee>
+      <div class="experience">
+        <div class="flex-box">
+          <h1>Experience</h1>
+          <div class="">
+            <p><b>Transform design</b> into web pages with</p>
+            <p>agility, quality and <b>high performance</b>.</p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-desktop fa-2xl"></i></div>
+            <div class="title1">Beyond the front-end</div>
+            <div class="desc1">
+              Highly skilled at progressive enhancement, design systems & UI
+              development.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-bolt fa-2xl"></i></div>
+            <div class="title1">Frameworks</div>
+            <div class="desc1">
+              Familiar with various front-end frameworks and libraries.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon"><i class="fa-brands fa-codepen fa-2xl"></i></div>
+            <div class="title1">Code</div>
+            <div class="desc1">
+              Experience in core programming languages for web development.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-mobile-screen fa-2xl"></i>
+            </div>
+            <div class="title1">Responsive Design</div>
+            <div class="desc1">
+              Keen eye for detail and strong understanding of user experience.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon"><i class="fa-solid fa-laptop fa-2xl"></i></div>
+            <div class="title1">Optimization</div>
+            <div class="desc1">
+              SEO techniques to promote better ranking of your pages.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-code-branch fa-2xl"></i>
+            </div>
+            <div class="title1">UI Design</div>
+            <div class="desc1">Interfaces for websites and applications.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section3">
+      <div class="introduction">
+        Hi, I'm skilled and passionate full stack developer with expertise in
+        both front-end and back-end technologies. With a comprehensive
+        understanding of HTML, CSS, JavaScript, Python, and frameworks like
+        Node.js and Django, I'm capable of creating robust and dynamic web
+        applications. Experienced in database management, I'm proficient in
+        working with SQL and NoSQL databases such as MySQL and MongoDB. As a
+        proactive communicator and collaborative team player, I thrives in agile
+        environments and is constantly eager to learn and stay up-to-date with
+        the latest industry trends. With a strong focus on delivering
+        transformative digital experiences, I'm dedicated to creating impactful
+        solutions as a full stack developer.
+      </div>
+      <div class="images">
+        <div class="circle"></div>
+        <div class="free_shape"></div>
+        <img src="./avatar.jpg" alt="My avatar" />
+      </div>
+    </section>
+    <!-- <section id="section4"></section>
+    <section >
       <form action="">
         <div>
           <label for="">Name</label> <input type="text" id="name" name="name" />
@@ -53,8 +456,23 @@
         </div>
         <button type="submit">Submit</button>
       </form>
-    </section>
+    </section> -->
     <!-- Footer -->
-    <footer>&copy; 2023 MyPortfolio. All rights reserved.</footer>
+    <footer>
+      <div class="footer_top">
+        <p>Let's talk about programming, design, or one of my</p>
+        <p>hobbies like football or books?</p>
+        <div class="profiles">
+          <div><i class="fa-brands fa-linkedin"></i><span>Linkedin</span></div>
+          <div><i class="fa-brands fa-github"></i><span>Github</span></div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_name">Vikash</div>
+        <div class="copyright">
+          &copy; 2023 MyPortfolio. All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
