@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .parent {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: auto 400px minmax(200px, 400px);
+        grid-auto-rows: 50px;
+        grid-gap: 10px;
+        width: 80%;
+      }
+
+      .parent > * {
+        background-color: blue;
+        border: 2px solid gold;
+      }
+
+      .clild {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">width expands to fill space</div>
+      <div class="child">400px wide</div>
+      <div class="child">min 200px max 500px wide</div>
+      <div class="child">width expands to fill space</div>
+      <div class="child">400px wide</div>
+      <div class="child">min 200px max 500px wide</div>
+      <div class="child">width expands to fill space</div>
+      <div class="child">400px wide</div>
+      <div class="child">min 200px max 500px wide</div>
+      <div class="child">50px high</div>
+    </div>
+    <div class="grid-container" id="container">
+      <div class="grid-item">width expands to fill space</div>
+      <div class="grid-item">400px wide</div>
+      <div class="grid-item">min 200px max 500px wide</div>
+      <div class="grid-item">width expands to fill space</div>
+      <div class="grid-item">400px wide</div>
+      <div class="grid-item">min 200px max 500px wide</div>
+      <div class="grid-item">width expands to fill space</div>
+      <div class="grid-item">400px wide</div>
+      <div class="grid-item">min 200px max 500px wide</div>
+      <div class="grid-item">50px high</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/42a182743f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Responsive design</title>
+    <style>
+        /* Browser Default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Global */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  background-color: #f5f5f5;
+}
+img {
+  width: 100%;
+}
+#logo{
+  filter: contrast(91%);
+}
+p {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Nav */
+nav {
+  width: 100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+}
+
+nav img {
+  width: 100px;
+  margin: 4px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 2px;
+}
+nav ul li {
+  padding: 3px;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+.create-post-btn {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* Header */
+header {
+  width: 100%;
+  height: 80vh;
+  background: url("./images/headerbg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header-content {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.header-content h1 {
+  font-size: 5rem;
+  padding: 10px;
+  margin-top: 20px;
+  color: #14213d;
+}
+
+.header-content a {
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 2px;
+  box-shadow: -5px -5px 0 1px black;
+
+}
+
+.header-content a:active {
+    box-shadow: 1px 1px 0 1px black;
+   
+    /* transition: all ease 0.5s; */
+}
+
+.header-content a:hover{
+    background-color: #e9393f;
+}
+
+/* Layout */
+.container-flex {
+  display: flex;
+  max-width: 1900px;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #fff;
+  flex: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+main {
+  padding: 10px;
+  flex: 55%;
+}
+
+.post-content {
+  padding: 10px;
+}
+.post-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+}
+
+.post-author {
+  margin: 10px;
+}
+
+.post-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #14213d;
+}
+
+aside {
+  padding: 10px;
+}
+
+.about-me {
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.about-me img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #003049;
+  color: #ffff;
+}
+
+footer .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #8d99ae;
+}
+
+.logo-text {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffbe0b;
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 1px;
+  font-size: 1.5rem;
+}
+
+footer .contact span {
+  padding: 10px;
+}
+footer .contact i {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.sidebar{
+    flex:40%;
+}
+
+.sidebar-content{
+    padding: 1rem 0;
+}
+
+footer .contact a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #0077b6;
+}
+
+footer .socials a {
+  margin: 10px;
+  font-size: 30px;
+  color: #fcbf49;
+  text-decoration: none;
+}
+/* Mobile first responsive design */
+@media (min-width: 675px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+  .container-flex {
+    flex-direction: row;
+  }
+  nav ul li {
+    padding: 10px;
+  }
+  main {
+    width: 70%;
+  }
+  aside {
+    width: 30%;
+  }
+}
+    </style>
+</head>
+<body>
+    <nav>
+      <div>
+        <img src="./images/logo.png" alt="logo" id="logo"/>
+      </div>
+
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Posts</a>
+        </li>
+        <li>
+          <a href="#">Login</a>
+        </li>
+        <li>
+          <a href="#">Register</a>
+        </li>
+        <li>
+          <a href="#" class="create-post-btn">New Post</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- header -->
+    <header>
+      <div class="header-content">
+        <h1>You write, We read</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
+          reiciendis
+        </p>
+        <a href="#">
+          <span>Create New Post</span>
+        </a>
+      </div>
+    </header>
+    <!-- content -->
+    <section class="container-flex">
+      <!-- main -->
+      <main>
+        <article class="post-content">
+          <h1 class="post-title">Why MERN Stack is on Hot Cake?</h1>
+          <img src="./images/post2.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+
+        <article class="post-content">
+          <h1 class="post-title">Become a Web Developer</h1>
+          <img src="./images/post3.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+
+        <article class="post-content">
+          <h1 class="post-title">How to Take care of Cat</h1>
+          <img src="./images/post7.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+
+        <article class="post-content">
+          <h1 class="post-title">Ways to become a Web Developer</h1>
+          <img src="./images/post5.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+      </main>
+      <!-- aside -->
+      <aside class="sidebar">
+        <div class="about-me">
+          <h2>About The Author</h2>
+          <img class="avatar" src="./images/pic2.jpg" alt="" />
+
+          <h2 class="about-name">Pranesh</h2>
+          <small>FullStack Web Developer</small>
+          <p class="about-me-bio">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            adipisci eligendi nobis itaque ex? Veniam tempore itaque cumque
+            fugiat iusto voluptatibus odit inventore dolorem numquam maxime,
+            repellendus labore corrupti expedita?
+          </p>
+        </div>
+
+        <div class="sidebar-content">
+          <h1 class="post-title">The Future of Tech</h1>
+          <img src="./images/post1.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </div>
+        <div class="sidebar-content">
+          <h1 class="post-title">Start Here</h1>
+          <img src="./images/post4.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </div>
+        <div class="sidebar-content">
+          <h1 class="post-title">Think Before you start</h1>
+          <img src="./images/post6.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            adipisci eligendi nobis itaque ex? Veniam tempore itaque cumque
+            fugiat iusto voluptatibus odit inventore dolorem numquam maxime,
+            repellendus labore corrupti expedita?
+          </p>
+        </div>
+        <div class="sidebar-content">
+          <h1 class="post-title">Learn HTML</h1>
+          <img src="./images/post2.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">Pranesh S</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">July-18-2023 </time>
+            </span>
+          </p>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </div>
+        <div class="sidebar-content">
+          <h2 class="widget-title">sidebar title</h2>
+          <img src="./images/post8.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            adipisci eligendi nobis itaque ex? Veniam tempore itaque cumque
+            fugiat iusto voluptatibus odit inventore dolorem numquam maxime,
+            repellendus labore corrupti expedita?
+          </p>
+        </div>
+      </aside>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="about">
+        <h1><span class="logo-text">Unikaksha </span> <span>Blog</span></h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti a
+          recusandae, molestiae incidunt
+        </p>
+        <!-- Contacts -->
+        <div class="contact">
+          <span>
+            <i class="fas fa-phone"></i>
+            + (91) 095602 08556
+          </span>
+          <span>
+            <i class="fas fa-envelope"></i>
+            
+            <a href="mailto:https://www.unikaksha.com/contact-us/">
+              www.unikaksha.com/contact-us
+            </a>
+          </span>
+
+        </div>
+        <!-- socials -->
+        <div class="socials">
+          <a href="https://www.youtube.com/channel/UCp5Id5P-KDLUMl8AVb13bFg">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCp5Id5P-KDLUMl8AVb13bFg">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCp5Id5P-KDLUMl8AVb13bFg">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCp5Id5P-KDLUMl8AVb13bFg">
+            <i class="fab fa-facebook"></i>
+          </a>
+         
+    </footer>
+</body>
+</html>

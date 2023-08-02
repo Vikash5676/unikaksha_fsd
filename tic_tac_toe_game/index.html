@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="confetti"></div>
+    <main class="main">
+      <h1 class="text-[2vmax]">Tic Tac Toe</h1>
+      <nav>
+        <div class="menu">Start</div>
+        <div class="menu">Clear</div>
+        <div class="menu">Exit</div>
+      </nav>
+      <div class="winner"></div>
+      <section class="hero1 md:w-[30%] w-[70%]">
+        <div class="row">
+          <div class="col" onclick="makeMove(0)"></div>
+          <div class="col" onclick="makeMove(1)"></div>
+          <div class="col" onclick="makeMove(2)"></div>
+        </div>
+        <div class="row">
+          <div class="col" onclick="makeMove(3)"></div>
+          <div class="col" onclick="makeMove(4)"></div>
+          <div class="col" onclick="makeMove(5)"></div>
+        </div>
+        <div class="row">
+          <div class="col" onclick="makeMove(6)"></div>
+          <div class="col" onclick="makeMove(7)"></div>
+          <div class="col" onclick="makeMove(8)"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
