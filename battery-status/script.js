@@ -35,14 +35,16 @@ document.getElementsByClassName("check-status", onclick = () => {
                     chargingTimeRef[0].innerText = `${hr}hr ${min}mins remaining`;
                 }
                 if ((battery.level * 100) < 21) {
-                    chargingLevel[0].style.display = "block"
+                    chargingLevel[0].style.backgroundColor = "rgba(255, 0, 0, 0.361)"
                     chargingLevel[0].innerText = "It seems Your battery percentage is very low please, plugged in your Charger"
                     charge.style.backgroundColor = "red"
                 } else if ((battery.level * 100) < 51) {
-                    chargingLevel[0].style.display = "none"
+                    chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0)";
+                    chargingLevel[0].innerText = ""
                     charge.style.backgroundColor = "red"
                 } else if ((battery.level * 100) < 100) {
-                    chargingLevel[0].style.display = "none"
+                    chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0)";
+                    chargingLevel[0].innerText = ""
                     charge.style.backgroundColor = "green"
                 }
             }
@@ -52,8 +54,9 @@ document.getElementsByClassName("check-status", onclick = () => {
             let batteryLevel = `${parseInt(battery.level * 100)}%`;
             charge.style.width = batteryLevel - '2.5px';
             if (batteryLevel === "100%") {
-                chargingLevel[0].style.display = "block"
                 chargingLevel[0].innerText = "It seems Your battery is full  please, plugg out your Charger"
+                chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0.292)";
+
             }
 
             chargeLevel[0].textContent = batteryLevel;
