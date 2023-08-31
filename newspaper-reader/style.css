@@ -1,0 +1,332 @@
+:root {
+  --primary: #fcfcfc;
+  --secondary: #2ac089;
+  --light-black: #444f56;
+  --dark: #000000;
+  --blue: #28c5de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif, serif;
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+main nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5vw 3.5vw;
+  position: fixed;
+  top: 0%;
+  box-shadow: 1px 1px 20px 1px var(--dark);
+  background-color: var(--primary);
+  z-index: 10000;
+}
+main nav .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main nav .left a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 1.2vw;
+  padding: 0 1vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+main nav .left a:hover, main nav .left a:active {
+  color: var(--light-black);
+}
+main nav .left select {
+  border: none;
+  width: 5.2vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: var(--light-black);
+  margin: 0 1vw;
+}
+main nav .left select:focus-visible {
+  border: none;
+  outline: none;
+}
+main nav .left select:hover, main nav .left select:active {
+  border: none;
+  color: var(--dark);
+}
+main nav .left select option:nth-child(1) {
+  display: none;
+}
+main nav .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main nav .center .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main nav .center .logo img {
+  width: 2.5vw;
+  margin: 0 1vw;
+}
+main nav .center .logo span {
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: var(--light-black);
+  text-transform: uppercase;
+}
+main nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main nav .right i {
+  font-size: 1.2vw;
+  color: var(--light-black);
+}
+main nav .right i:hover {
+  cursor: pointer;
+  color: var(--dark);
+}
+main nav .right button {
+  border: 0.5px solid var(--light-black);
+  padding: 1vw 1.5vw;
+  margin: 0 1vw;
+  border-radius: 50px;
+  font-size: 1.2vw;
+  box-shadow: 0px 1px 1px 0px var(--light-black);
+}
+main nav .right button:hover, main nav .right button:active {
+  box-shadow: 0px 2px 2px 1px var(--light-black);
+  cursor: pointer;
+}
+main nav .right button:nth-child(2) {
+  background-color: var(--primary);
+}
+main nav .right button:nth-child(3) {
+  background-color: var(--blue);
+  color: var(--primary);
+}
+main .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  margin-top: 8.5%;
+}
+main .hero .left_ {
+  width: 75%;
+  background-color: var(--primary);
+  padding: 0 7vw;
+}
+main .hero .left_ .content {
+  width: 70%;
+}
+main .hero .left_ .content p:nth-child(1) {
+  font-size: 3vw;
+  font-weight: 600;
+  color: var(--dark);
+}
+main .hero .left_ .content p:nth-child(2) {
+  font-size: 3vw;
+  font-weight: 600;
+  color: var(--blue);
+}
+main .hero .left_ .content p:nth-child(3) {
+  margin-top: 20px;
+  font-size: 2vw;
+}
+main .hero .left_ .content p:nth-child(3) span {
+  font-weight: 600;
+}
+main .hero .left_ .content button {
+  border-radius: 50px;
+  margin-top: 2vw;
+  padding: 1.2vw 2.5vw;
+  border: none;
+  background-color: var(--blue);
+  color: var(--primary);
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+main .hero .left_ .content button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 3px 1px rgba(128, 128, 128, 0.444);
+}
+main .hero .right_ {
+  width: 25%;
+  height: inherit;
+  background-color: var(--blue);
+}
+main .fav {
+  padding: 5vw 3vw;
+  background-color: #f6f7fb;
+}
+main .fav p {
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 600;
+}
+main .fav .list-item {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  margin-top: 2.5vw;
+}
+main .fav .list-item .item {
+  display: block;
+  height: 40px;
+  background: center center no-repeat;
+  filter: invert(81%) sepia(18%) saturate(155%) hue-rotate(175deg) brightness(93%) contrast(82%);
+}
+main .fav .list-item .item1 {
+  width: 110px;
+  background-image: url(./masthead-guardian.svg);
+}
+main .fav .list-item .item2 {
+  height: 48px;
+  width: 127.056px;
+  background-image: url(./masthead-vogue.svg);
+}
+main .fav .list-item .item3 {
+  width: 190.588px;
+  background-image: url(./masthead-newsweek.svg);
+}
+main .fav .list-item .item4 {
+  width: 72.94px;
+  background-image: url(./masthead-gq.svg);
+}
+main .fav .list-item .item5 {
+  background-size: contain;
+  width: 122.352px;
+  background-image: url(./masthead-forbes.svg);
+}
+main .hero1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+main .hero1 .container {
+  width: 70%;
+  padding: 0 10vw;
+}
+main .hero1 .container p:nth-child(1) {
+  font-size: 1.5vw;
+  color: var(--blue);
+  font-weight: 600;
+}
+main .hero1 .container p:nth-child(2) {
+  font-size: 3.5vw;
+  color: var(--dark);
+  font-weight: 600;
+  margin-top: 1vw;
+}
+main .hero1 .container p:nth-child(3) {
+  font-size: 1.5vw;
+  color: var(--light-black);
+  margin-top: 1.2vw;
+  line-height: 1.5;
+}
+main .hero1 .container button {
+  border-radius: 50px;
+  margin-top: 2vw;
+  padding: 1.2vw 2.5vw;
+  background-color: var(--primary);
+  color: var(--blue);
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: 0.5px solid lightgray;
+}
+main .hero1 .container button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 3px 1px rgba(128, 128, 128, 0.444);
+}
+main .hero2 p:nth-child(1) {
+  font-size: 2.5vw;
+  font-weight: 600;
+  padding: 0 3.5vw;
+}
+main .hero2 .one_two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.5vw;
+}
+main .hero2 .one_two p:nth-child(1) {
+  margin-top: 1.5vw;
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+main .hero2 .one_two a {
+  font-size: 1.2vw;
+  text-decoration: none;
+  color: var(--light-black);
+  font-weight: 600;
+}
+main .hero2 .one_two a:hover {
+  color: lightgray;
+}
+main .hero2 #crousal_1 {
+  width: 100%;
+  height: 10vh;
+  display: block;
+  margin: 3vw 0;
+  /* display 4 */
+}
+@media (max-width: 768px) {
+  main .hero2 #crousal_1 .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  main .hero2 #crousal_1 .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+main .hero2 #crousal_1 .carousel-inner .carousel-item.active,
+main .hero2 #crousal_1 .carousel-inner .carousel-item-start,
+main .hero2 #crousal_1 .carousel-inner .carousel-item-next,
+main .hero2 #crousal_1 .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+@media (min-width: 768px) {
+  main .hero2 #crousal_1 .carousel-inner .carousel-item-right.active,
+  main .hero2 #crousal_1 .carousel-inner .carousel-item-next,
+  main .hero2 #crousal_1 .carousel-item-next:not(.carousel-item-start) {
+    transform: translateX(25%) !important;
+  }
+  main .hero2 #crousal_1 .carousel-inner .carousel-item-left.active,
+  main .hero2 #crousal_1 .carousel-item-prev:not(.carousel-item-end),
+  main .hero2 #crousal_1 .active.carousel-item-start,
+  main .hero2 #crousal_1 .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
+  main .hero2 #crousal_1 .carousel-item-next.carousel-item-start,
+  main .hero2 #crousal_1 .active.carousel-item-end {
+    transform: translateX(0) !important;
+  }
+  main .hero2 #crousal_1 .carousel-inner .carousel-item-prev,
+  main .hero2 #crousal_1 .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
+}
+
+.card img {
+  height: 17vw;
+}/*# sourceMappingURL=style.css.map */

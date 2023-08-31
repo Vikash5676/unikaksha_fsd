@@ -26,6 +26,11 @@ document.getElementsByClassName("check-status", onclick = () => {
             if (battery.charging) {
                 charge.classList.add("active");
                 chargingTimeRef[0].innerText = "";
+                if (`${parseInt(battery.level * 100)}%` === "100%") {
+                    chargingLevel[0].innerText = "It seems Your battery is full  please, plugg out your Charger"
+                    chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0.292)";
+
+                }
             } else {
                 charge.classList.remove("active");
                 //Display time left to discharge only when it is a integer value i.e not infinity
@@ -53,11 +58,6 @@ document.getElementsByClassName("check-status", onclick = () => {
         function updateLevelInfo() {
             let batteryLevel = `${parseInt(battery.level * 100)}%`;
             charge.style.width = batteryLevel - '2.5px';
-            if (batteryLevel === "100%") {
-                chargingLevel[0].innerText = "It seems Your battery is full  please, plugg out your Charger"
-                chargingLevel[0].style.backgroundColor = "rgba(0, 128, 0, 0.292)";
-
-            }
 
             chargeLevel[0].textContent = batteryLevel;
         }

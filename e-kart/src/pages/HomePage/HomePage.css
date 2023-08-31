@@ -1,0 +1,31 @@
+.containers {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+}
+
+.hero1 {
+    background-color: #fff;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero1 div img {
+    width: 70%;
+}
+
+.hero1 div span {
+    text-align: center;
+}
+
+.hero1 div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}

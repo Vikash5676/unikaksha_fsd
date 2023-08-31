@@ -1,0 +1,71 @@
+nav ul {
+    background-color: var(--primary);
+    padding: 1rem 4rem;
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.logo {
+    flex-direction: column;
+    font-style: italic;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo a>span {
+    color: rgb(0, 81, 255);
+    font-weight: 900;
+
+    font-size: 1.3rem;
+    font-kerning: 1rem;
+
+}
+
+.logo p {
+    font-size: 0.8rem;
+}
+
+.exp {
+    color: lightgrey;
+
+}
+
+.plus {
+    color: #ffd900;
+}
+
+.search i {
+    position: absolute;
+}
+
+.icon {
+    padding: 13px 9px;
+    min-width: 40px;
+    color: rgb(160, 160, 160);
+    font-size: 1.3rem;
+}
+
+.search_input {
+    width: 100%;
+    padding: 13px 2.2rem;
+    border: none;
+    background-color: #f0f5ff;
+    font-size: 1.3rem;
+    width: 40vw;
+}
+
+nav ul li:nth-child(3):hover,
+nav ul li:nth-child(4):hover,
+nav ul li:nth-child(5):hover,
+nav ul li:nth-child(6):hover {
+    cursor: pointer;
+}
